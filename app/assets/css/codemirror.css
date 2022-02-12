@@ -1,0 +1,5 @@
+.CodeMirror {
+  resize: vertical;
+  overflow: auto !important;
+}
+
