@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/jquery.json-viewer.css">
     <link rel="stylesheet" href="assets/css/lforms.min.css">
     <link rel="stylesheet" href="assets/css/codemirror.css">
+    <link rel="stylesheet" href="assets/css/mycodemirror.css">
 </head>
 
 <body style="padding-left: 77px;margin-top: 57px;">
@@ -178,8 +179,8 @@
                           success: function (data) {
                               smap = data.entry[0].resource;
                               // Add the form to the page
-                              document.getElementById("mappingCode").innerHTML = $('<div/>').html(smap.text.div).text();
-//                              myCodeMirror.setValue($('<div/>').html(smap.text.div).text())
+//                              document.getElementById("mappingCode").innerHTML = $('<div/>').html(smap.text.div).text();
+                              myCodeMirror.setValue($('<div/>').html(smap.text.div).text())
 //                              myCodeMirror.setValue(smap.text.div)
 //                              myCodeMirror.setValue("NO MAP")
 }
@@ -235,8 +236,8 @@
         Accept: "application/fhir+json;fhirVersion=4.0",         
         "Content-Type": "text/fhir-mapping"   
         },
-//        data: myCodeMirror.getValue(), //once we have codeMirror working
-        data: document.getElementById("mappingCode").value,
+        data: myCodeMirror.getValue(), //once we have codeMirror working
+//        data: document.getElementById("mappingCode").value,
         success: function (data) {
             console.log(data);
         },

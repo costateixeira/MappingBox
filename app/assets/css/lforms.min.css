@@ -2841,6 +2841,8 @@ textarea {
   width: 100%;
   --bs-body-bg: var(--white-color);
   --bs-body-font-weight: normal;
+  color: #000000;
+  min-height: 100px;
 }
 
 optgroup {
